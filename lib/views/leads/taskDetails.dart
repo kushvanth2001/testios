@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
-import 'package:leads_manager/helper/networkHelper.dart';
-import 'package:leads_manager/models/model_assignedTo.dart';
-import 'package:leads_manager/models/model_priority.dart';
-import 'package:leads_manager/models/model_taskstatus.dart';
-import 'package:leads_manager/models/model_tasktype.dart';
+import '../../helper/SharedPrefsHelper.dart';
+import '../../helper/networkHelper.dart';
+import '../../models/model_assignedTo.dart';
+import '../../models/model_priority.dart';
+import '../../models/model_taskstatus.dart';
+import '../../models/model_tasktype.dart';
 
 class TaskDetails extends StatefulWidget {
   String? taskName;

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
-import 'package:leads_manager/helper/networkHelper.dart';
+import '../helper/SharedPrefsHelper.dart';
+import '../helper/networkHelper.dart';
 
 class AssignedTo {
   String? status;

@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/src/response.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:leads_manager/constants/networkConstants.dart';
+import '../constants/networkConstants.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:leads_manager/constants/sharedPrefsConstants.dart';
-import 'package:leads_manager/utils/snapPeUI.dart';
+import '../constants/sharedPrefsConstants.dart';
+import '../utils/snapPeUI.dart';
 import '../models/model_application.dart';
 
 class SharedPrefsHelper {

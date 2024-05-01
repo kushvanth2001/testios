@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:leads_manager/services/localNotificationService.dart';
+import '../services/localNotificationService.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:leads_manager/constants/networkConstants.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
-import 'package:leads_manager/helper/networkHelper.dart';
+import '../constants/networkConstants.dart';
+import '../helper/SharedPrefsHelper.dart';
+import '../helper/networkHelper.dart';
 import 'package:http/http.dart' as http;
-import 'package:leads_manager/helper/socketHelper.dart';
+import '../helper/socketHelper.dart';
 import '../models/model_chat.dart';
 import '../utils/snapPeNetworks.dart';
 

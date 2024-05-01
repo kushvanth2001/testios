@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:leads_manager/Controller/leads_controller.dart';
-import 'package:leads_manager/constants/styleConstants.dart';
-import 'package:leads_manager/models/model_application.dart';
-import 'package:leads_manager/models/model_document.dart';
-import 'package:leads_manager/utils/snapPeNetworks.dart';
-import 'package:leads_manager/utils/snapPeUI.dart';
-import 'package:leads_manager/views/leads/quickResponse/filesTab.dart';
-import 'package:leads_manager/views/leads/quickResponse/messageTab.dart';
+import '../../../Controller/leads_controller.dart';
+import '../../../constants/styleConstants.dart';
+import '../../../models/model_application.dart';
+import '../../../models/model_document.dart';
+import '../../../utils/snapPeNetworks.dart';
+import '../../../utils/snapPeUI.dart';
+import 'filesTab.dart';
+import 'messageTab.dart';
 
 class QuickResponsePage extends StatefulWidget {
   final String? customerName;

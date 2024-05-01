@@ -8,30 +8,30 @@ import 'package:flutter/services.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:leads_manager/Controller/chatDetails_controller.dart';
-import 'package:leads_manager/helper/networkHelper.dart';
-import 'package:leads_manager/marketing/marketing.dart';
-import 'package:leads_manager/marketing/promotions.dart';
-import 'package:leads_manager/models/model_lead.dart';
-import 'package:leads_manager/views/leads/leadDetails/leadDetails.dart';
+import '../Controller/chatDetails_controller.dart';
+import '../helper/networkHelper.dart';
+import '../marketing/marketing.dart';
+import '../marketing/promotions.dart';
+import '../models/model_lead.dart';
+import 'leads/leadDetails/leadDetails.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:phone_state_background/phone_state_background.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:leads_manager/Controller/leads_controller.dart';
+import '../Controller/leads_controller.dart';
 import 'dart:convert';
-import 'package:leads_manager/utils/snapPeNetworks.dart';
-import 'package:leads_manager/Controller/chat_controller.dart';
-import 'package:leads_manager/constants/colorsConstants.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
-import 'package:leads_manager/models/model_chat.dart';
-import 'package:leads_manager/services/localNotificationService.dart';
-import 'package:leads_manager/views/CustomDrawer.dart';
-import 'package:leads_manager/views/chat/chatDetailsScreen.dart';
-import 'package:leads_manager/views/chat/liveAgentScreen.dart';
-import 'package:leads_manager/views/customers/customersScreen.dart';
-import 'package:leads_manager/views/leads/leadsScreen.dart';
-import 'package:leads_manager/views/profile/profileScreen.dart';
-import 'package:leads_manager/utils/snapPeUI.dart';
+import '../utils/snapPeNetworks.dart';
+import '../Controller/chat_controller.dart';
+import '../constants/colorsConstants.dart';
+import '../helper/SharedPrefsHelper.dart';
+import '../models/model_chat.dart';
+import '../services/localNotificationService.dart';
+import 'CustomDrawer.dart';
+import 'chat/chatDetailsScreen.dart';
+import 'chat/liveAgentScreen.dart';
+import 'customers/customersScreen.dart';
+import 'leads/leadsScreen.dart';
+import 'profile/profileScreen.dart';
+import '../utils/snapPeUI.dart';
 import 'package:http/http.dart' as http;
 import '../constants/networkConstants.dart';
 import '../constants/styleConstants.dart';
@@ -40,7 +40,7 @@ import '../helper/mqttHelper.dart';
 import 'catalogue/catalogueScreen.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'order/orderScreen.dart';
-import 'package:leads_manager/models/model_application.dart';
+import '../models/model_application.dart';
 Future<Map<String,dynamic>?> fetchLatestCallLog() async {
   Iterable<CallLogEntry> entries = await CallLog.get();
   if (entries.isNotEmpty) {
@@ -498,14 +498,14 @@ setdata()async{
               var mobile = message.data['title'];
               //var mobile = message.data['destination_id'];
               if (mobile != null) {
-                Get.to(() => ChatDetailsScreen(
-                    firstAppName: userselectedApplicationName ?? firstAppName,
-                    isOther: false,
-                    isFromLeadsScreen: false,
-                    chatModel:
-                        ChatModel(customerNo: message.notification?.title),
-                    leadController: leadController,
-                    isFromNotification: true));
+                // Get.to(() => ChatDetailsScreen(
+                //     firstAppName: userselectedApplicationName ?? firstAppName,
+                //     isOther: false,
+                //     isFromLeadsScreen: false,
+                //     chatModel:
+                //         ChatModel(customerNo: message.notification?.title),
+                //     leadController: leadController,
+                //     isFromNotification: true));
               }
             }
           },
@@ -532,18 +532,18 @@ setdata()async{
             print("Notification - Message Details - ${message.data['title']}");
             // LocalNotificationService.createAndDisplayNotification(message);
 
-            Get.to(() => ChatDetailsScreen(
-                firstAppName: userselectedApplicationName ?? firstAppName,
-                isOther: false,
-                isFromLeadsScreen: false,
-                chatModel: ChatModel(customerNo: message.notification?.title),
-                leadController: leadController,
-                isFromNotification: true));
-          }
-        });
+        //     Get.to(() => ChatDetailsScreen(
+        //         firstAppName: userselectedApplicationName ?? firstAppName,
+        //         isOther: false,
+        //         isFromLeadsScreen: false,
+        //         chatModel: ChatModel(customerNo: message.notification?.title),
+        //         leadController: leadController,
+        //         isFromNotification: true));
+         }
+       });
       });
     });
-    Get.put(ChatDetailsController(context));
+   // Get.put(ChatDetailsController(context));
     
     
   //  _channel.setMethodCallHandler((call) async {
@@ -599,8 +599,8 @@ setdata()async{
     }
     Map<String, Widget> featureScreens = {
       'CustomerRolesManagement': LeadScreen(firstAppName: firstAppName),
-      'Communications': LiveAgentScreen(
-          applicationNames: _applicationNames, firstAppName: firstAppName),
+      // 'Communications': LiveAgentScreen(
+      //     applicationNames: _applicationNames, firstAppName: firstAppName),
       'Customers': CustomersScreen(),
       'SKUs': CatalogueScreen(),
       'Orders': OrderScreen(),

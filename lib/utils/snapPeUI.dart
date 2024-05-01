@@ -9,8 +9,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:leads_manager/helper/mqttHelper.dart';
-import 'package:leads_manager/views/dashboard/notneeded.dart';
+import '../helper/mqttHelper.dart';
+import '../views/dashboard/notneeded.dart';
 import '../Controller/leads_controller.dart';
 import '../constants/colorsConstants.dart';
 import '../helper/SharedPrefsHelper.dart';
@@ -408,10 +408,10 @@ class SnapPeUI {
         icon: Icon(Icons.leaderboard),
         label: "Leads",
       ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.chat),
-        label: "Chat",
-      ),
+      // BottomNavigationBarItem(
+      //   icon: Icon(Icons.chat),
+      //   label: "Chat",
+      // ),
       BottomNavigationBarItem(
         icon: Icon(Icons.people),
         label: "Customer",
@@ -867,15 +867,15 @@ class SnapPeUI {
           icon: Icon(Icons.leaderboard_outlined), label: 'Leads'));
     }
 
-    if (clientGroupFeatures[clientGroupName]?.contains('Communications') ??
-        false) {
-      items.add(
-        BottomNavigationBarItem(
-          icon: Icon(Icons.chat_bubble_outline),
-          label: "Chat",
-        ),
-      );
-    }
+    // if (clientGroupFeatures[clientGroupName]?.contains('Communications') ??
+    //     false) {
+    //   items.add(
+    //     BottomNavigationBarItem(
+    //       icon: Icon(Icons.chat_bubble_outline),
+    //       label: "Chat",
+    //     ),
+    //   );
+    // }
 
     if (clientGroupFeatures[clientGroupName]?.contains('Customers') ?? false) {
       items.add(

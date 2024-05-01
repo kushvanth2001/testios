@@ -8,7 +8,7 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
+import '../../helper/SharedPrefsHelper.dart';
 import 'package:textfield_search/textfield_search.dart';
 import '../../../models/model_catalogue.dart';
 import '../../../models/model_order_summary.dart';

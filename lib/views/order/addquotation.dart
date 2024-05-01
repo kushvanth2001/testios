@@ -5,7 +5,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
-import 'package:leads_manager/widgets/customcoloumnwidgets.dart';
+import '../../widgets/customcoloumnwidgets.dart';
 
 import '../../constants/colorsConstants.dart';
 import '../../helper/SharedPrefsHelper.dart';

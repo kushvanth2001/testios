@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:leads_manager/constants/styleConstants.dart';
-import 'package:leads_manager/models/model_leadDetails.dart';
-import 'package:leads_manager/utils/snapPeUI.dart';
-import 'package:leads_manager/views/leads/leadDetails/notesWidget.dart';
-import 'package:leads_manager/utils/snapPeNetworks.dart';
-import 'package:leads_manager/views/leads/leadsScreen.dart';
+import '../../constants/styleConstants.dart';
+import '../../models/model_leadDetails.dart';
+import '../../utils/snapPeUI.dart';
+import 'leadDetails/notesWidget.dart';
+import '../../utils/snapPeNetworks.dart';
+import 'leadsScreen.dart';
 import '../../../Controller/leadDetails_controller.dart';
 import '../../../Controller/leads_controller.dart';
 import '../../../constants/colorsConstants.dart';
-import 'package:leads_manager/models/model_lead.dart' as model_lead;
+import '../../models/model_lead.dart' as model_lead;
 import '../../../models/model_lead.dart';
 
 class LeadNotesScreen extends StatefulWidget {

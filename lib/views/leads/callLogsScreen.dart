@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:leads_manager/Controller/leads_controller.dart';
-import 'package:leads_manager/constants/styleConstants.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
-import 'package:leads_manager/helper/networkHelper.dart';
-import 'package:leads_manager/utils/snapPeUI.dart';
-import 'package:leads_manager/views/leads/callLogWidget.dart';
+import '../../Controller/leads_controller.dart';
+import '../../constants/styleConstants.dart';
+import '../../helper/SharedPrefsHelper.dart';
+import '../../helper/networkHelper.dart';
+import '../../utils/snapPeUI.dart';
+import 'callLogWidget.dart';
 
 class CallLogsScreen extends StatefulWidget {
   final int? leadId;

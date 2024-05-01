@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:leads_manager/models/model_application.dart';
-import 'package:leads_manager/utils/snapPeNetworks.dart';
-import 'package:leads_manager/views/leads/quickResponse/template.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
+import '../../../models/model_application.dart';
+import '../../../utils/snapPeNetworks.dart';
+import 'template.dart';
+import '../../../helper/SharedPrefsHelper.dart';
 
 class MessagesTabContent extends StatefulWidget {
   List<Application> applications;

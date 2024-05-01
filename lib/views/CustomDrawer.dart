@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:leads_manager/marketing/addpromotions.dart';
-import 'package:leads_manager/views/dashboard/notneeded.dart';
+import '../marketing/addpromotions.dart';
+import 'dashboard/notneeded.dart';
 import '../constants/colorsConstants.dart';
 import '../helper/SharedPrefsHelper.dart';
 import '../utils/snapPeNetworks.dart';

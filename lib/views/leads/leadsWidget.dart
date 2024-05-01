@@ -14,25 +14,25 @@ import 'package:multi_select_flutter/dialog/mult_select_dialog.dart';
 import 'package:multi_select_flutter/util/multi_select_item.dart';
 import 'package:multi_select_flutter/util/multi_select_list_type.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:leads_manager/Controller/chat_controller.dart';
-import 'package:leads_manager/constants/colorsConstants.dart';
-import 'package:leads_manager/constants/networkConstants.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
-import 'package:leads_manager/helper/networkHelper.dart';
-import 'package:leads_manager/models/model_CreateNote.dart';
-import 'package:leads_manager/models/model_Merchants.dart';
-import 'package:leads_manager/models/model_application.dart';
-import 'package:leads_manager/models/model_callstatus.dart';
-import 'package:leads_manager/models/model_chat.dart';
-import 'package:leads_manager/models/model_lead.dart';
-import 'package:leads_manager/models/model_tags.dart';
-import 'package:leads_manager/utils/SharedFunctions.dart';
-import 'package:leads_manager/utils/snapPeNetworks.dart';
-import 'package:leads_manager/views/chat/chatDetailsScreen.dart';
-import 'package:leads_manager/views/leads/callLogsScreen.dart';
-import 'package:leads_manager/views/leads/leadDetails/leadDetails.dart';
-import 'package:leads_manager/views/leads/leadNotesScreen.dart';
-import 'package:leads_manager/views/leads/quickResponse/QuickPage.dart';
+import '../../Controller/chat_controller.dart';
+import '../../constants/colorsConstants.dart';
+import '../../constants/networkConstants.dart';
+import '../../helper/SharedPrefsHelper.dart';
+import '../../helper/networkHelper.dart';
+import '../../models/model_CreateNote.dart';
+import '../../models/model_Merchants.dart';
+import '../../models/model_application.dart';
+import '../../models/model_callstatus.dart';
+import '../../models/model_chat.dart';
+import '../../models/model_lead.dart';
+import '../../models/model_tags.dart';
+import '../../utils/SharedFunctions.dart';
+import '../../utils/snapPeNetworks.dart';
+import '../chat/chatDetailsScreen.dart';
+import 'callLogsScreen.dart';
+import 'leadDetails/leadDetails.dart';
+import 'leadNotesScreen.dart';
+import 'quickResponse/QuickPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../Controller/leads_controller.dart';
@@ -424,86 +424,86 @@ print(  widget.leadController.scrolloffset);
                   },
                 )),
             SizedBox(width: 4),
-            if (widget.lead.mobileNumber != null)
-              Container(
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 235, 235, 235),
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
-                  child: IconButton(
-                    icon: Image.asset("assets/icon/chat.png", width: 22),
-                    onPressed: () {
-                      Get.back();
+            // if (widget.lead.mobileNumber != null)
+            //   Container(
+            //       decoration: BoxDecoration(
+            //           color: Color.fromARGB(255, 235, 235, 235),
+            //           borderRadius: BorderRadius.all(Radius.circular(20))),
+            //       child: IconButton(
+            //         icon: Image.asset("assets/icon/chat.png", width: 22),
+            //         onPressed: () {
+            //           Get.back();
 
-                      print(
-                          'chatModel: ${widget.chatModels} and ${widget.lead.mobileNumber}');
-                      for (final chatModel in widget.chatModels ?? []) {
-                        print('customerNo: ${chatModel}');
-                      }
-                      if (widget.chatModels != null &&
-                          widget.chatModels!.isNotEmpty) {
-                        final firstChatModel = widget.chatModels!.first;
-                        print('First ChatModel:');
-                        print('  id: ${firstChatModel.id}');
-                        if (firstChatModel.id != null) {
-                          print('First ChatModel id:');
-                          // Replace 'property1', 'property2', etc. with the actual property names of the Id class
-                          print(
-                              '  property1: ${firstChatModel.id?.customerNo}');
-                          // ...
-                        }
-                        print('  businessNo: ${firstChatModel.businessNo}');
-                        print('  customerName: ${firstChatModel.customerName}');
-                        print('  customerNo: ${firstChatModel.customerNo}');
-                        print('  lastTs: ${firstChatModel.lastTs}');
-                        print('  messages: ${firstChatModel.messages}');
-                        print(
-                            '  multiTenantContext: ${firstChatModel.multiTenantContext}');
-                        print(
-                            '  overrideStatus: ${firstChatModel.overrideStatus}');
-                      }
+            //           print(
+            //               'chatModel: ${widget.chatModels} and ${widget.lead.mobileNumber}');
+            //           for (final chatModel in widget.chatModels ?? []) {
+            //             print('customerNo: ${chatModel}');
+            //           }
+            //           if (widget.chatModels != null &&
+            //               widget.chatModels!.isNotEmpty) {
+            //             final firstChatModel = widget.chatModels!.first;
+            //             print('First ChatModel:');
+            //             print('  id: ${firstChatModel.id}');
+            //             if (firstChatModel.id != null) {
+            //               print('First ChatModel id:');
+            //               // Replace 'property1', 'property2', etc. with the actual property names of the Id class
+            //               print(
+            //                   '  property1: ${firstChatModel.id?.customerNo}');
+            //               // ...
+            //             }
+            //             print('  businessNo: ${firstChatModel.businessNo}');
+            //             print('  customerName: ${firstChatModel.customerName}');
+            //             print('  customerNo: ${firstChatModel.customerNo}');
+            //             print('  lastTs: ${firstChatModel.lastTs}');
+            //             print('  messages: ${firstChatModel.messages}');
+            //             print(
+            //                 '  multiTenantContext: ${firstChatModel.multiTenantContext}');
+            //             print(
+            //                 '  overrideStatus: ${firstChatModel.overrideStatus}');
+            //           }
 
-                      print("chatModel isss: ${chatModel}");
-                      print("firstName isss: ${widget.firstAppName}");
+            //           print("chatModel isss: ${chatModel}");
+            //           print("firstName isss: ${widget.firstAppName}");
 
-                      if (chatModel != null) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ChatDetailsScreen(
-                                    firstAppName: widget.firstAppName,
-                                    chatModel: chatModel,
-                                    isOther: false,
-                                    leadController: widget.leadController,
-                                    isFromLeadsScreen: true,
-                                  )),
-                        );
-                      } else {
-                        ChatModel newChatModel = ChatModel(
-                          id: Id(customerNo: widget.lead.mobileNumber),
-                          businessNo: "",
-                          customerName: widget.lead.customerName,
-                          customerNo: widget.lead.mobileNumber,
-                          lastTs: DateTime.now().toUtc().toIso8601String(),
-                          messages: [],
-                          multiTenantContext: 'context',
-                          overrideStatus: OverrideStatus(agentOverride: 1),
-                        );
-                        print(
-                            "${DateTime.now().toUtc().toIso8601String()} is lastTs");
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ChatDetailsScreen(
-                                    firstAppName: widget.firstAppName,
-                                    chatModel: newChatModel,
-                                    isOther: false,
-                                    leadController: widget.leadController,
-                                    isFromLeadsScreen: true,
-                                  )),
-                        );
-                      }
-                    },
-                  )),
+            //           if (chatModel != null) {
+            //             Navigator.push(
+            //               context,
+            //               MaterialPageRoute(
+            //                   builder: (context) => ChatDetailsScreen(
+            //                         firstAppName: widget.firstAppName,
+            //                         chatModel: chatModel,
+            //                         isOther: false,
+            //                         leadController: widget.leadController,
+            //                         isFromLeadsScreen: true,
+            //                       )),
+            //             );
+            //           } else {
+            //             ChatModel newChatModel = ChatModel(
+            //               id: Id(customerNo: widget.lead.mobileNumber),
+            //               businessNo: "",
+            //               customerName: widget.lead.customerName,
+            //               customerNo: widget.lead.mobileNumber,
+            //               lastTs: DateTime.now().toUtc().toIso8601String(),
+            //               messages: [],
+            //               multiTenantContext: 'context',
+            //               overrideStatus: OverrideStatus(agentOverride: 1),
+            //             );
+            //             print(
+            //                 "${DateTime.now().toUtc().toIso8601String()} is lastTs");
+            //             Navigator.push(
+            //               context,
+            //               MaterialPageRoute(
+            //                   builder: (context) => ChatDetailsScreen(
+            //                         firstAppName: widget.firstAppName,
+            //                         chatModel: newChatModel,
+            //                         isOther: false,
+            //                         leadController: widget.leadController,
+            //                         isFromLeadsScreen: true,
+            //                       )),
+            //             );
+            //           }
+            //         },
+            //       )),
           ],
         )
       ],

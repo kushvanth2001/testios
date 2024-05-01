@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:get/get.dart';
-import 'package:leads_manager/views/order/createquotation.dart';
+import 'createquotation.dart';
 import '../../constants/colorsConstants.dart';
 import '../../models/model_community.dart';
 import '../../models/model_consumer.dart';

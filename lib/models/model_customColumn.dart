@@ -4,9 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:leads_manager/helper/SharedPrefsHelper.dart';
-import 'package:leads_manager/helper/networkHelper.dart';
-import 'package:leads_manager/models/model_lead.dart';
+import '../helper/SharedPrefsHelper.dart';
+import '../helper/networkHelper.dart';
+import 'model_lead.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
 
